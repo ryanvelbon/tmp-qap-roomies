@@ -94,6 +94,9 @@ class Profile extends Model
         'sex',
         'religion',
         'ethnicity',
+        'first_name',
+        'last_name',
+        'about',
     ];
 
     protected $filterable = [
@@ -103,6 +106,9 @@ class Profile extends Model
         'sex',
         'religion',
         'ethnicity',
+        'first_name',
+        'last_name',
+        'about',
     ];
 
     protected $fillable = [
@@ -111,6 +117,9 @@ class Profile extends Model
         'sex',
         'religion',
         'ethnicity',
+        'first_name',
+        'last_name',
+        'about',
         'created_at',
         'updated_at',
         'deleted_at',

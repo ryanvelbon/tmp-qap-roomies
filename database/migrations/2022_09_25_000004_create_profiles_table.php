@@ -14,6 +14,9 @@ class CreateProfilesTable extends Migration
             $table->string('sex')->nullable();
             $table->string('religion')->nullable();
             $table->string('ethnicity')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->longText('about')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

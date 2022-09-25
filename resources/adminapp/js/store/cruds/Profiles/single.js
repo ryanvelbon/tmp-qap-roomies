@@ -7,6 +7,9 @@ function initialState() {
       sex: null,
       religion: null,
       ethnicity: null,
+      first_name: '',
+      last_name: '',
+      about: '',
       created_at: '',
       updated_at: '',
       deleted_at: ''
@@ -108,6 +111,15 @@ const actions = {
   setEthnicity({ commit }, value) {
     commit('setEthnicity', value)
   },
+  setFirstName({ commit }, value) {
+    commit('setFirstName', value)
+  },
+  setLastName({ commit }, value) {
+    commit('setLastName', value)
+  },
+  setAbout({ commit }, value) {
+    commit('setAbout', value)
+  },
   setCreatedAt({ commit }, value) {
     commit('setCreatedAt', value)
   },
@@ -156,6 +168,15 @@ const mutations = {
   },
   setEthnicity(state, value) {
     state.entry.ethnicity = value
+  },
+  setFirstName(state, value) {
+    state.entry.first_name = value
+  },
+  setLastName(state, value) {
+    state.entry.last_name = value
+  },
+  setAbout(state, value) {
+    state.entry.about = value
   },
   setCreatedAt(state, value) {
     state.entry.created_at = value

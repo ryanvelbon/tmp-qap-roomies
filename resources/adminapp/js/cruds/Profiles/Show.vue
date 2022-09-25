@@ -73,6 +73,30 @@
                           </datatable-enum>
                         </td>
                       </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.profile.fields.first_name') }}
+                        </td>
+                        <td>
+                          {{ entry.first_name }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.profile.fields.last_name') }}
+                        </td>
+                        <td>
+                          {{ entry.last_name }}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-primary">
+                          {{ $t('cruds.profile.fields.about') }}
+                        </td>
+                        <td>
+                          {{ entry.about }}
+                        </td>
+                      </tr>
                     </tbody>
                   </div>
                 </div>

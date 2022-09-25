@@ -125,6 +125,24 @@ export default {
           tdComp: DatatableEnum
         },
         {
+          title: 'cruds.profile.fields.first_name',
+          field: 'first_name',
+          thComp: TranslatedHeader,
+          sortable: true
+        },
+        {
+          title: 'cruds.profile.fields.last_name',
+          field: 'last_name',
+          thComp: TranslatedHeader,
+          sortable: true
+        },
+        {
+          title: 'cruds.profile.fields.about',
+          field: 'about',
+          thComp: TranslatedHeader,
+          sortable: true
+        },
+        {
           title: 'global.actions',
           thComp: TranslatedHeader,
           tdComp: DatatableActions,

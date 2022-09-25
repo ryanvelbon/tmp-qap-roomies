@@ -39,6 +39,20 @@ class UpdateProfileRequest extends FormRequest
                 'nullable',
                 'in:' . implode(',', Arr::pluck(Profile::ETHNICITY_SELECT, 'value')),
             ],
+            'first_name' => [
+                'string',
+                'max:25',
+                'nullable',
+            ],
+            'last_name' => [
+                'string',
+                'max:25',
+                'nullable',
+            ],
+            'about' => [
+                'string',
+                'nullable',
+            ],
         ];
     }
 }
