@@ -126,6 +126,63 @@
                       @search.blur="clearFocus"
                     />
                   </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.first_name,
+                      'is-focused': activeField == 'first_name'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.profile.fields.first_name')
+                    }}</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      :value="entry.first_name"
+                      @input="updateFirstName"
+                      @focus="focusField('first_name')"
+                      @blur="clearFocus"
+                    />
+                  </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.last_name,
+                      'is-focused': activeField == 'last_name'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.profile.fields.last_name')
+                    }}</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      :value="entry.last_name"
+                      @input="updateLastName"
+                      @focus="focusField('last_name')"
+                      @blur="clearFocus"
+                    />
+                  </div>
+                  <div
+                    class="form-group bmd-form-group"
+                    :class="{
+                      'has-items': entry.about,
+                      'is-focused': activeField == 'about'
+                    }"
+                  >
+                    <label class="bmd-label-floating">{{
+                      $t('cruds.profile.fields.about')
+                    }}</label>
+                    <textarea
+                      class="form-control"
+                      rows="5"
+                      :value="entry.about"
+                      @input="updateAbout"
+                      @focus="focusField('about')"
+                      @blur="clearFocus"
+                    ></textarea>
+                  </div>
                 </div>
               </div>
             </div>
@@ -180,7 +237,10 @@ export default {
       'setDob',
       'setSex',
       'setReligion',
-      'setEthnicity'
+      'setEthnicity',
+      'setFirstName',
+      'setLastName',
+      'setAbout'
     ]),
     updateUser(value) {
       this.setUser(value)
@@ -196,6 +256,15 @@ export default {
     },
     updateEthnicity(value) {
       this.setEthnicity(value)
+    },
+    updateFirstName(e) {
+      this.setFirstName(e.target.value)
+    },
+    updateLastName(e) {
+      this.setLastName(e.target.value)
+    },
+    updateAbout(e) {
+      this.setAbout(e.target.value)
     },
     submitForm() {
       this.updateData()
