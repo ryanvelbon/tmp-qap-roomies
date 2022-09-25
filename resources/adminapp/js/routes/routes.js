@@ -96,6 +96,30 @@ const routes = [
             meta: { title: 'cruds.user.title' }
           }
         ]
+      },
+      {
+        path: 'profiles',
+        name: 'profiles.index',
+        component: () => import('@cruds/Profiles/Index.vue'),
+        meta: { title: 'cruds.profile.title' }
+      },
+      {
+        path: 'profiles/create',
+        name: 'profiles.create',
+        component: () => import('@cruds/Profiles/Create.vue'),
+        meta: { title: 'cruds.profile.title' }
+      },
+      {
+        path: 'profiles/:id',
+        name: 'profiles.show',
+        component: () => import('@cruds/Profiles/Show.vue'),
+        meta: { title: 'cruds.profile.title' }
+      },
+      {
+        path: 'profiles/:id/edit',
+        name: 'profiles.edit',
+        component: () => import('@cruds/Profiles/Edit.vue'),
+        meta: { title: 'cruds.profile.title' }
       }
     ]
   }

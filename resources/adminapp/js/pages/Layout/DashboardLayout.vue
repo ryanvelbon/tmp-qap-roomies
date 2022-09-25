@@ -58,6 +58,12 @@ export default {
               gate: 'user_access'
             }
           ]
+        },
+        {
+          title: 'cruds.profile.title',
+          icon: 'table_view',
+          path: { name: 'profiles.index' },
+          gate: 'profile_access'
         }
       ]
     }
