@@ -16,4 +16,7 @@ Route::group(['prefix' => 'v1', 'as' => 'api.', 'namespace' => 'Api\V1\Admin', '
 
     // Users
     Route::resource('users', 'UsersApiController');
+
+    // Profile
+    Route::resource('profiles', 'ProfileApiController');
 });
